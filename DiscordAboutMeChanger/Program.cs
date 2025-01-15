@@ -10,7 +10,7 @@ class Program
         var unixTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
         Console.WriteLine("Enter your account balance: ");
         userInput = Console.ReadLine();
-        var aboutMeString = $"**Jack of all trades, master of none, but oftentimes better than a master of one.** \n:moneybag: Account Balance (as of **<t:{unixTimestamp}:R>**): **{userInput}** \n`This value gets updated every 1-3 days`";
+        var aboutMeString = $"Known as HakuSystems & lyze but you can call me Noah\n**Please get to know me properly before you put me in a box.**\n**{userInput}** (as of **<t:{unixTimestamp}:R>**)";
         Console.WriteLine("Your new about me string is: ");
         Console.WriteLine(aboutMeString);
         ClipboardService.SetText(aboutMeString);
