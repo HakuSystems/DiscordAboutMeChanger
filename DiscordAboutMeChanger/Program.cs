@@ -91,7 +91,7 @@ namespace DiscordAboutMeChanger
             
             // Versuch der automatischen Korrektur der Dezimaltrennzeichen.
             string fixedInput;
-            if (input.contains('.') && !input.contains(','))
+            if (input.Contains('.') && !input.Contains(','))
             {
                 fixedInput = input.Replace(".", ",");
                 if (decimal.TryParse(fixedInput, NumberStyles.Number | NumberStyles.AllowCurrencySymbol, deCulture, out accountBalance))
@@ -100,7 +100,7 @@ namespace DiscordAboutMeChanger
                     return true;
                 }
             }
-            else if (input.contains(',') && !input.contains('.'))
+            else if (input.Contains(',') && !input.Contains('.'))
             {
                 fixedInput = input.Replace(",", ".");
                 if (decimal.TryParse(fixedInput, NumberStyles.Number | NumberStyles.AllowCurrencySymbol, CultureInfo.InvariantCulture, out accountBalance))
